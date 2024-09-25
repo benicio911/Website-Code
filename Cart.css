@@ -1,0 +1,33 @@
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.item-name, .item-quantity {
+  margin: 5px 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.change-quantity, .remove-item {
+  padding: 5px 8px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.change-quantity:hover, .remove-item:hover {
+  background-color: #0056b3;
+}
+
+.change-quantity:disabled, .remove-item:disabled {
+  background-color: #ccc;
+}

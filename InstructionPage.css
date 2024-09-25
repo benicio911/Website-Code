@@ -1,0 +1,210 @@
+.outercontainer{
+  width: 100vw;
+  height: 100vh;
+  background-color: #000019; /* Black background */
+  position: relative;
+}
+
+.outercontainer h1{
+  position: absolute;
+  left: 50%;
+  top: -25%;
+  transform: translateX(-50%); /* Moves the element back by half its own width to center it */
+  text-shadow: 4px 4px 2px rgb(139, 139, 139);
+  color: white;
+  font-weight: 100;
+  width: 100%;
+  letter-spacing: 10px;
+  font-size: 6rem;
+}
+
+.container{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1300px;
+  height: 700px;
+  background: hsl(0, 0%, 96%);
+  box-shadow: 0 0px 20px #dbdbdb50;
+}
+
+.container .slide .item{
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 0px 10px #505050;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.slide .item:nth-child(3){
+  left: 70%;
+}
+.slide .item:nth-child(4){
+  left: calc(70% + 220px);
+}
+.slide .item:nth-child(5){
+  left: calc(70% + 440px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+  left: calc(70% + 660px);
+  opacity: 0;
+}
+
+
+
+.item .content{
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 300px;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: none;
+}
+
+
+.slide .item:nth-child(2) .content{
+  display: block;
+}
+
+
+.content .name{
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button{
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+  from{
+      opacity: 0;
+      transform: translate(0, 100px);
+      filter: blur(33px);
+  }
+
+  to{
+      opacity: 1;
+      transform: translate(0);
+      filter: blur(0);
+  }
+}
+
+
+
+.button-class{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  background-color: transparent; /* Or any color you prefer */
+}
+
+.button-class button{
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  background: #000;
+  border: 1px solid #000;
+  transition: 0.3s;
+}
+
+.button-class button:hover{
+  background: #ababab;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Ensures the content within each item is centered */
+  .outercontainer{
+    padding-top: 45vh;
+  }
+
+  .outercontainer h1 {
+    position: absolute; /* Keeps the element positioned in relation to its nearest positioned ancestor */
+    top: 5%; /* Adjusts the distance from the top to place it above the slideshow */
+    left: 50%; /* Starts the element at the center of the container */
+    transform: translateX(-50%); /* Moves the element back by half its own width to center it */
+    font-size: 4rem;
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-align: center; /* Ensures the text within the header is centered */
+  }
+
+  .content p{
+    font-size: 0.2rem;
+  }
+  
+  .item .content {
+    position: relative; /* Adjust if necessary to fit your design */
+    top: 50%; /* Centers content vertically */
+    left: 50%; /* Centers content horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the position to truly center the content */
+    text-align: center; /* Centers the text */
+    display: none; /* Ensures the content is always shown */
+    width: 30%; /* Adjust width to ensure content does not overflow */
+    padding: 4%;
+    border-radius: 8px;
+    border: 2px solid rgb(20, 20, 58);
+    box-shadow: rgba(255, 255, 255, 0.27) 0px 0px 65px 0px inset;
+    background: #0000003b;
+  }
+
+  /* Adjusts the name and description text size for better readability on smaller screens */
+  .item .content .name{
+    font-size: 5vw;
+  }
+
+  .item .content .des {
+    color: rgb(255, 255, 255);
+    font-size: 2rem; /* Responsive font size, adjust as necessary */
+    padding: 10%;
+  }
+
+  /* Adjust the button styling to make it more accessible on mobile */
+  .content button {
+    width: auto; /* Allows the button to resize based on content */
+    padding: 10px 20px; /* Ensures the button is easy to tap */
+  }
+}

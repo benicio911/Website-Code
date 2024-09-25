@@ -1,0 +1,199 @@
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+  
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+  }
+  
+
+.features {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #000019; /* Black background */
+    color: rgb(255, 255, 255); /* Gold text */
+    position: relative;
+    height: 60%;
+    padding-bottom: 20%;
+    overflow-x: hidden;
+}
+
+.about-p{
+    width: 60vh;
+    margin: 0 auto; /* Centers the paragraph block within its parent */
+    text-align: center; /* Ensures the text inside the paragraph is centered */
+}
+
+.features h1{
+    margin-top: 0;
+    margin-bottom: 1%;
+    font-weight: 100;
+    letter-spacing: 10px;
+    font-size: 6rem;
+    text-shadow: 4px 4px 2px rgb(139, 139, 139);
+}
+
+.feature-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    gap: 200px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 20px;
+}
+
+.feature {
+    width: 100%;
+    padding-top: 100%; /* Makes the height equal to the width */
+    letter-spacing: 2px;
+    margin-top: 6vh;
+    padding: 10px;
+    padding-bottom: 15%;
+    font-size: 1.1vw;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: linear-gradient(to top left, #131313 60%, #535353) padding-box;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    border-image: linear-gradient(to bottom, #6fafe9 0%, #b5fdff 55%, #000019 100%) 1 stretch;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+    animation: animate 1s ease-in-out 1 forwards;
+    /* Adjust padding here if necessary */
+}
+  
+  .feature::before {
+    left: 0; /* Position the left border */
+  }
+  
+  .feature::after {
+    right: 0; /* Position the right border */
+  }
+
+
+.feature-0 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.845), rgba(0, 0, 0, 0.577)), url('../assets/automatedtrading.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.feature-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.945), rgba(0, 0, 0, 0.877)), url('../assets/real-time.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.feature-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.945), rgba(0, 0, 0, 0.877)), url('../assets/risk-managment.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.feature-3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.945), rgba(0, 0, 0, 0.877)), url('../assets/customstrategies.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.feature-0:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.007)), url('../assets/automatedtrading.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.feature-1:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.575), rgba(0, 0, 0, 0.5)), url('../assets/real-time.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.feature-2:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.575), rgba(0, 0, 0, 0.5)), url('../assets/risk-managment.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.feature-3:hover {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/customstrategies.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+  .feature img {
+    max-width: 80px; /* Adjust based on your needs */
+    margin-bottom: 20px;
+  }
+
+  .feature h3 {
+    margin-bottom: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem; /* Slightly larger for mobile */
+    /* Glitch/Marix effect */
+}
+
+.feature p {
+    color: #fff; /* Lighter text for descriptions */
+    font-size: 1rem; /* Adjust for readability on mobile */
+    width: 60%; /* Example: reducing width to squeeze text together */
+    margin: 0 auto; /* Centers the paragraph block within its parent */
+    text-align: center; /* Ensures the text inside the paragraph is centered */
+    /* Glitch/Matrix effect remains unchanged */
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .feature-list {
+        grid-template-columns: repeat(2, 1fr); /* Adjust number of columns for laptops */
+        gap: 50px; /* Adjust spacing between cards */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .features{
+        align-items: center; /* Centers the feature-list */
+        justify-content: center; /* Additional centering if needed */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feature-list {
+        display: grid;
+        grid-template-columns: 1fr; /* Stacks items in a single column */
+        gap: 20px; /* Adjust the gap as needed */
+        padding: 0 20px; /* Adds padding on the sides */
+        justify-items: center; /* Centers the grid items within the grid container */
+    }
+
+    /* If .feature has specific width or alignment styles that prevent centering, adjust here */
+    .feature {
+        /* Example adjustment if .feature items have a fixed width */
+        width: auto; /* Resets any fixed width, allowing content width */
+        max-width: 350px; /* Optional: sets a max width for larger items */
+        margin: 0 auto; /* Centers the feature card in the grid cell */
+    }
+
+    .about-p{
+        width: 30vh;
+    }
+
+    .features h1{
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .feature-list {
+        grid-template-columns: repeat(3, 1fr); /* Three columns for desktops */
+    }
+}

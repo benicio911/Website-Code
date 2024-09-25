@@ -1,0 +1,30 @@
+.contact {
+    background-color: #f9f9f9; /* Light background to differentiate the section */
+    padding: 40px 20px;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.contact-form {
+    max-width: 500px; /* Keep the form reasonably sized */
+    margin: 0 auto; /* Center the form */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 5px; /* Rounded corners for a modern look */
+}
+
+.contact-form button {
+    background-color: #007bff; /* Match the button color with the theme */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,75 @@
+.hero {
+    color: rgb(255, 255, 255);
+    width: 100vw; /* Ensure it covers the full viewport width */
+    height: 110vh; /* Full viewport height */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../assets/hero-pos-bg.png'); /* Adjust path as necessary */
+    background-size: cover; /* Cover the entire area of the element */
+    background-repeat: no-repeat;
+    background-position: top; /* Center the background image */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative; /* Essential for positioning the pseudo-element */
+}
+
+
+.hero-background {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+}
+
+.hero-content{
+    z-index: 1;
+    width: 60vh; /* Adjust width as needed for your design */
+    max-width: 960px; /* Prevents the content from becoming too wide on large screens */
+    margin-top: auto;
+    margin-bottom: 14vh;
+    align-self: center; /* This might not be necessary but can help ensure alignment */
+}
+
+.hero-content h1 {
+    text-shadow: #576686 4px 4px 4px;
+    font-size: 3.1rem; /* Responsive font size */
+    color: #ffffff; /* Ensure text is white for maximum contrast */
+    text-shadow: 2px 2px 8px rgb(0, 0, 0); /* Text shadow for legibility */
+}
+
+.hero-content h2{
+    letter-spacing: 10px;
+    margin-top: -60px;
+    font-size: 3.7rem;
+    font-weight: 100;
+    color: rgb(255, 255, 255); /* Ensure text is white for maximum contrast */
+    text-align: center;
+}
+
+.hero-content p {
+    text-align: center;
+    margin-top: -50px;
+    font-size: 1rem;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    color: rgb(255, 255, 255);
+}
+
+.btn {
+    background-image: linear-gradient(to top right, #fa46c4, rgba(0, 0, 255, 0.63)); /* Gradient background */
+    color: #fff;
+    width: 50%;
+    height: 30%;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+.btn:hover{
+    background: rgb(255, 255, 255);
+    color: black;
+}
+

@@ -1,0 +1,179 @@
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    box-sizing: border-box;
+    z-index: 100;
+  }
+
+/* Assuming default, hyperATheme, and productsTheme are the classes added to the navbar or its links */
+.nav-link, .nav-logo {
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.default .nav-link, .default .nav-logo {
+  color: #000000;
+}
+
+.hyperATheme .nav-link, .hyperATheme .nav-logo {
+  color: #000000;
+}
+
+.productsTheme .nav-link, .productsTheme .nav-logo {
+  color: #000000;
+}
+
+  /* Navbar.css */
+.hyper-a-nav a{
+  color: black; /* Changes the link color to black for HyperA page */
+  z-index: 10000;
+  /* Add other HyperA-specific styles here */
+}
+  
+  .hamburger-icon {
+    display: none; /* Initially hidden on desktop */
+  }
+  
+  .hamburger-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+  }
+  
+/* Navbar.css */
+.navbar .logo svg {
+  color: white; /* This color will be used as the currentColor value within the SVG */
+}
+  
+  .nav-links {
+    list-style: none;
+    display: flex; /* Changed to flex to center align items */
+    flex: 1; /* Take available space */
+    justify-content: right; /* Center links */
+    margin-right: 5vw;
+    padding-left: 0; /* Remove default padding */
+  }
+  
+  .nav-links li {
+    margin: 0 35px; /* Space out links */
+  }
+  
+  .nav-links li a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 26px; /* Adjust as needed */
+  }
+  
+  .nav-links li a:hover {
+    color: rgb(226, 215, 167); /* Hover effect color */
+  }
+  
+  .nav-special{
+    list-style: none;
+    display: flex; /* Changed to flex to center align items */
+    flex: 1; /* Take available space */
+    justify-content: center; /* Center links */
+    padding-left: 0; /* Remove default padding */
+    right: 2vw;
+    position: absolute;
+  }
+
+  .nav-special li{
+    text-shadow: rgb(226, 215, 167) 2px 2px 2px;
+    margin: 0 15px; /* Space out links */
+  }
+
+  .nav-special li a{
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Adjust as needed */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .search-bar {
+    padding: 5px 10px;
+    position: absolute;
+    right: 15vw;
+    font-size: 16px;
+    border: none;
+    color: white;
+    border: 2px solid rgb(226, 215, 167);
+    background: #000;
+    border-radius: 5px;
+  }
+  
+  .cart-popup {
+    position: absolute;
+    right: 0;
+    top: 100%; /* Positioned right below the navbar */
+    width: 300px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Hide overflow */
+    border-radius: 8px;
+    z-index: 1050; /* Higher than other elements but below modals/dialogs if any */
+  }
+  
+  .cart-container {
+    max-height: 360px; /* Slightly less than the cart-popup to accommodate a checkout button */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+    padding: 10px;
+  }
+
+  .cart-icon{
+    cursor: pointer;
+  }
+  
+  /* Styles for mobile, showing the hamburger icon */
+  @media (max-width: 768px) {
+    .hamburger-icon {
+      display: block;
+      color: white;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 30px; /* Set a specific width */
+      height: 25px;
+      top: 3vh;
+      position: absolute;
+      background: transparent;
+      border: none;
+      right: 20vw;
+      cursor: pointer;
+    }
+    
+    .nav-links {
+      position: absolute;
+      top: 8vh;
+      left: 20%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      flex-direction: column; /* Stack links vertically */
+      align-items: center; /* Center links horizontally */
+      display: none; /* Hidden by default */
+      transition: all 0.5s ease;
+    }
+    
+    .nav-links .link{
+        padding: 1vh;
+        margin-bottom: 2vh;
+        width: 40vw;
+        background: #00000088;
+        box-shadow: rgb(19, 17, 17) 0px 0px 65px 0px inset;
+        border-radius: 20px;
+        border: 2px solid rgba(255, 255, 255, 0.493);
+    }
+
+    .nav-links.show {
+      display: flex; /* Show when toggled */
+      transition: all 0.5s ease;
+    }
+  }

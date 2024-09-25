@@ -1,0 +1,38 @@
+.pricing {
+    background-color: #000;
+    color: #d4af37;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.plan {
+    background-color: #1a1a1a; /* Slightly lighter black for the plan cards */
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 250px; /* Ensure cards don't become too narrow */
+}
+
+.plan h3, .plan .price {
+    color: #d4af37;
+}
+
+.plan button {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.plan button:hover {
+    background-color: #b7950b; /* Darker gold on hover */
+}

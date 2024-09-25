@@ -1,0 +1,392 @@
+.products-container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 1fr auto;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #05011b;
+}
+
+.products-navbar .nav-links a:hover{
+  color: rgb(155, 155, 155);
+}
+
+
+.products-header {
+  text-align: center;
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  padding: 0;
+  margin: 0;
+  width: 90%;
+  border-bottom: 1px solid white;
+  transform: translateX(-50%);
+}
+
+.products-header h1 {
+  font-weight: 100;
+  letter-spacing: 10px;
+  padding: 0;
+  margin: 0;
+  font-size: 4.5rem; /* Adjust the size as needed */
+  color: #ffffff; /* Or any other color that fits your design */
+}
+
+.product-demo-container {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 10px;
+}
+
+.product-info-container {
+  margin-left: auto; /* Keep it centered */
+  margin-right: auto; /* Keep it centered */
+  align-items: center; /* Ensure content is centered inside */
+  /* Add a left padding or adjust the margin to slide it to the right */
+  padding-left: 5vw; /* This makes the slide responsive to the viewport size */
+}
+
+
+.add-to-cart-container {
+  width: 100%;
+  margin-top: 1em;
+}
+
+.add-to-cart-button {
+  padding: 15px 10px;
+  background: transparent;
+  color: white;
+  margin-top: 10%;
+  border: none;
+  cursor: pointer;
+  border: 2px solid rgb(114, 114, 114);
+  box-shadow: rgba(255, 255, 255, 0.27) 0px 0px 65px 0px inset;
+  width: 100%;
+  font-size: 1.2rem;
+  margin-left: 20%;
+  letter-spacing: 4px;
+  font-weight: lighter;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.add-to-cart-button:hover{
+  background-color: black;
+  color: white;
+  box-shadow: black 0px 0px 65px 0px inset;
+}
+
+.product-card {
+  background: rgba(0, 0, 0, 0);
+  padding-left: 2.8em;
+  padding-right: 2.8em;
+  height: 52vh;
+  font-size: 1.0rem;
+  border: 2px solid rgb(114, 114, 114);
+  box-shadow: rgba(255, 255, 255, 0.27) 0px 0px 65px 0px inset;
+  width: 100%;
+  margin-top: 10%;
+  border-radius: 8px;
+}
+
+.product-card h3{
+  font-size: 3rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.product-logo {
+  width: 110px; /* Adjust size as needed */
+  height: auto;
+}
+
+.video-container {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.custom-bot-container {
+  padding: 1em;
+  border: 2px solid rgb(114, 114, 114);
+  box-shadow: rgba(255, 255, 255, 0.27) 0px 0px 65px 0px inset;
+  align-self: center; /* Center the box vertically */
+  justify-self: center; /* Center the box horizontally if within a grid */
+  border-radius: 8px;
+  height: auto; /* Maintain set height */
+  width: 120%; /* Example width to prevent edge touching */
+  min-width: 300px; /* Minimum width to prevent shrinking too much */
+  margin-top: 60%;
+  margin-right: 100%; /* Or adjust as needed for spacing */
+}
+
+.custom-bot-form h3 {
+  margin-bottom: 0.5em;
+}
+
+.custom-bot-form p{
+  text-align: left;
+}
+
+.custom-bot-form textarea {
+  width: 90%;
+  height: 40vh;
+  margin-bottom: 1em;
+}
+
+.logo-carousel {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  width: 75%;
+  bottom: 2%;
+  left: -5%;
+  padding: 1vw;
+}
+
+.logo-car {
+  overflow: hidden;
+  flex: 0 0 auto;
+  background: transparent;
+  transition: transform 0.5s ease;
+  z-index: 1000;
+  border: none; /* Explicitly remove borders */
+}
+
+.logo-car img {
+  width: 9.5vh;
+  height: 9.5vh;
+  z-index: 1000;
+  border: none; /* Explicitly remove borders */
+}
+
+.logo-car.active {
+  transform: scale(1.3);
+}
+  
+.custom-bot-form {
+  grid-column: 2;
+  height: 70vh;
+  position: sticky;
+  top: 20px; /* Adjust this value to match your header's height */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; /* Centers the children horizontally */
+}
+
+.custom-bot-form h3, .custom-bot-form p {
+  color: #fff;
+  text-align: left; /* Ensures text inside headers and paragraphs is aligned to the left */
+  width: 100%; /* Ensures the text aligns to the left within the full width of the form */
+}
+
+.custom-bot-form input,
+.custom-bot-form textarea {
+  color: white;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  background: transparent;
+  width: 100%; /* Ensures inputs and textareas take full width of the form */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.custom-bot-form input::-webkit-input-placeholder,
+.custom-bot-form textarea::-webkit-input-placeholder {
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+}
+
+.custom-bot-form input:-ms-input-placeholder,
+.custom-bot-form textarea:-ms-input-placeholder {
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+}
+
+.custom-bot-form input::placeholder,
+.custom-bot-form textarea::placeholder {
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+}
+
+.custom-bot-form button {
+  background: rgba(255, 255, 255, 0.226);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  align-self: center; /* Specifically center-aligns the button */
+}
+
+.custom-bot-form button:hover{
+  background-color: black;
+}
+@media only screen and (max-width: 1024px) {
+  .products-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  .product-demo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .product-card{
+    margin-top: 30%;
+    width: 80%;
+    margin-right: 11%;
+  }
+
+  .product-info-container, .add-to-cart-container, .video-container, .custom-bot-container {
+    width: 100%; /* Full width for better alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-bot-container {
+    width: 90%; /* Adjust the width as necessary, but ensure it's less than 100% */
+    max-width: 500px; /* Optional: Set a max-width to prevent the container from becoming too wide on larger mobile devices */
+    margin: 20px auto; /* Top and bottom margins for spacing, and auto margins on the sides for centering */
+    display: flex; /* Use flexbox for internal centering if needed */
+    flex-direction: column; /* Stack internal items vertically */
+    align-items: center; /* Center-align the flex items */
+    justify-content: center; /* Center content vertically within the container, if it has flexible height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+
+  .add-to-cart-container{
+    margin-top: 30%;
+    margin-right: 10%;
+  }
+
+  .add-to-cart-button {
+    width: 70%; /* Adjust as needed, or keep 100% for full width */
+    margin-right: 5%;
+    margin-top: 10%;
+    margin: 20px 0; /* Space above and below */
+  }
+
+  .logo-carousel {
+    display: grid;
+    position: absolute;
+    bottom: 46%;
+    left: 12%;
+    grid-template-columns: repeat(5, 1fr); /* Creates five columns */
+    grid-template-rows: repeat(2, auto); /* Creates two rows, height adjusts to content */
+    gap: 10px; /* Space between grid items */
+    justify-items: center; /* Center items horizontally in their grid area */
+    align-items: center; /* Center items vertically in their grid area */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    width: 100%; /* Adjust the width as needed */
+    max-width: 768px; /* Ensures the carousel doesn't stretch too far on larger screens */
+    margin: 20px auto; /* Center the carousel with automatic margins */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in the element's total size */
+  }
+
+
+  .logo-car img{
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .products-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  .product-demo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  .product-card{
+    margin-top: 60%;
+    width: 80%;
+    margin-right: 11%;
+  }
+
+  .product-info-container, .add-to-cart-container, .video-container, .custom-bot-container {
+    width: 100%; /* Full width for better alignment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-bot-container {
+    width: 90%; /* Adjust the width as necessary, but ensure it's less than 100% */
+    max-width: 500px; /* Optional: Set a max-width to prevent the container from becoming too wide on larger mobile devices */
+    margin: 20px auto; /* Top and bottom margins for spacing, and auto margins on the sides for centering */
+    display: flex; /* Use flexbox for internal centering if needed */
+    flex-direction: column; /* Stack internal items vertically */
+    align-items: center; /* Center-align the flex items */
+    justify-content: center; /* Center content vertically within the container, if it has flexible height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+
+  .add-to-cart-container{
+    margin-top: 60%;
+    margin-right: 10%;
+  }
+
+  .add-to-cart-button {
+    width: 70%; /* Adjust as needed, or keep 100% for full width */
+    margin-right: 5%;
+    margin-top: 10%;
+    margin: 20px 0; /* Space above and below */
+  }
+
+  .logo-carousel {
+    display: grid;
+    position: absolute;
+    bottom: 47%;
+    left: 0;
+    grid-template-columns: repeat(5, 1fr); /* Creates five columns */
+    grid-template-rows: repeat(2, auto); /* Creates two rows, height adjusts to content */
+    gap: 10px; /* Space between grid items */
+    justify-items: center; /* Center items horizontally in their grid area */
+    align-items: center; /* Center items vertically in their grid area */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    width: 100%; /* Adjust the width as needed */
+    max-width: 768px; /* Ensures the carousel doesn't stretch too far on larger screens */
+    margin: 20px auto; /* Center the carousel with automatic margins */
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in the element's total size */
+  }
+
+
+  .logo-car img{
+    width: 80px;
+    height: 80px;
+  }
+}

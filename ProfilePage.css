@@ -1,0 +1,55 @@
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .profile-panel {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .models-panel {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .models-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .model-item {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .no-models p {
+    margin-bottom: 10px;
+  }
+  
+  .no-models button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .no-models button:hover {
+    background-color: #0056b3;
+  }

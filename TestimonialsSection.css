@@ -1,0 +1,29 @@
+.testimonials {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #1a1a1a; /* For contrast */
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 250px; /* Consistency in size */
+}
+
+.testimonial p {
+    color: #d4af37; /* Gold text for emphasis */
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    color: #d4af37;
+}
